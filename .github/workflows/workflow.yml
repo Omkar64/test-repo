@@ -1,3 +1,10 @@
-
- # This is a workflow file
-
+name: My First GitHub Action  
+on: [push]  
+jobs:  
+  build:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout code  
+        uses: actions/checkout@v4  
+      - name: Print Message  
+        run: echo "Hello, GitHub Actions!"
